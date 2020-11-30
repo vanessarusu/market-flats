@@ -1,0 +1,54 @@
+#cookie-notice {
+	padding: 4rem 0;
+}
+
+@media (min-width: $tablet) {
+    .cookie-notice-container {
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        display: flex !important;
+        justify-content: space-between;
+        align-content:space-between;
+        font-size: 16px;	
+        line-height: 1.4;
+
+        #cn-notice-text {
+            width: 70%;
+            max-width: 800px;
+            letter-spacing: 0.7px;
+        }
+    }
+
+    #cn-notice-buttons {
+        max-width: 20%;
+        width: 100%;
+    }
+}
+
+// push button down on mobile
+@media (max-width: $tablet) {
+	#cn-notice-buttons {
+		margin-top: 2rem;
+	}
+}
+
+// button
+#cn-notice-buttons a {
+	padding: 1.6rem;	
+	border-radius: 0;
+	width: 100%;
+	display: block;
+	background: transparent;
+	border: 1px solid var(--green) !important;
+	text-transform: uppercase;
+}
+
+// hide close icon
+.cn-close-icon {
+    display: none !important;
+}
+
+
+
