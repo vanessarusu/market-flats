@@ -1,0 +1,54 @@
+h1, h1 span,
+h2, h2 span,
+h3, h3 span,
+h4, h4 span,
+h5, h5 span,
+h6, h6 span {
+    font-weight: 900;
+    letter-spacing: 0.8px;
+    font-family: $sans-serif;
+}
+
+section, aside, div, p, span {
+    font-weight: 300;
+    letter-spacing: 0.3px;
+}
+
+::selection {
+    background: $green;
+    color: white;
+}
+
+.custom-button-outline {
+    .fl-button-wrap {
+        position: relative;
+
+        a.fl-button {
+            background: url(http://localhost:8888/vive-market-flats/wordpress/wp-content/uploads/2020/11/custom-button-background.svg) center center no-repeat;
+            background-size: contain;
+            max-width: 480px;
+            margin: 0 auto;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease-in-out;
+
+            span {
+                font-weight: 600;
+                letter-spacing: 3px;
+            }
+
+            &:hover {
+                opacity: 0.8;
+            }
+
+            @media (max-width: $small-desktop) {
+                max-width: 420px;
+            }
+            @media (max-width: $tablet) {
+                max-width: 320px;
+            }
+        }
+    }
+}

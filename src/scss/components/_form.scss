@@ -1,0 +1,292 @@
+#wpforms-confirmation-62 {
+    background: transparent;
+    border: none;
+    padding: 60px 0 0;
+    position: relative;
+    z-index: 10;
+
+    p {
+        font-weight: 600;
+        max-width: 450px;
+        line-height: 1.2;
+    }
+}
+
+form#wpforms-form-62 {    
+    // form class styling
+    .wpforms-field {
+        padding-top: 10px;
+    }
+
+    .wpforms-error {
+        font-size: 14px;
+        text-transform: capitalize;
+        letter-spacing: 1px;
+        font-weight: 400;
+        padding-top: 8px;
+    }
+
+    .wpforms-required-label {
+        color: $black;
+    }
+
+    .form-submit-field {
+        background: $green;
+        border: none;
+        width: 100%;
+        max-width: 240px;
+        color: $black;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 2px;
+        font-size: 16px;
+        padding: 1.6rem;
+        margin-top: 80px;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            background: darken($green, 5%);
+        }
+    }
+
+    .first-half {
+        width: 48%;
+        float: left;
+        margin-right: 2%;
+
+        @media (max-width: $tablet) {
+            width: 100%;
+            margin-right: 0;
+            float: none;
+        }
+    }
+
+    .second-half {
+        clear: none;
+        float: left;
+        width: 50%;
+
+        @media (max-width: $tablet) {
+            width: 100%;
+            margin-right: 0;
+            float: none;
+        }
+    }
+
+    // form elements
+    input {
+        background: white;
+        outline: none;
+        border: none;
+        border-radius: 0;
+        border-bottom: 1px solid $black;
+        width: 100%;
+        max-width: 100%;
+        display: block;
+        font-weight: 500;
+        padding-left: 0;
+    }
+
+    label {
+        font-size: 15px;
+        text-transform: uppercase;
+        display: block;
+        letter-spacing: 1.8px;
+    }
+
+    select {
+        display: none;
+        @media (max-width: $small-desktop) {
+            display: block;
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+
+    // specific fields
+    .form-parking-field { 
+        margin-right:2%;
+        @media (max-width: $tablet) {
+            margin-top: 2rem;
+        }
+    }
+
+    .form-parking-field,
+    .form-bike-field {
+        clear: none;
+        display: flex;
+        text-align: right;
+        float: left;
+        width: 48%;
+
+        @media (max-width: $tablet) {
+            width: 100%;
+        }
+
+        & > label {
+            margin-right: 10px;
+        }
+
+        li {
+            display: inline-block;
+            min-width: 60px;
+
+            input {
+                display: inline;
+                max-width: 50px;
+                display: none;
+
+                &:checked + label:before {
+                    background-color: $green;
+                }
+            }
+
+            .wpforms-field-label-inline {
+                font-weight: 600;
+                color: $green;
+                padding-left: 30px;
+                padding-right: 10px;
+                position: relative;
+                font-size: 14px;
+
+                &:before {
+                    content: "";
+                    left: 0px;
+                    top: -5px;
+                    position: absolute;
+                    width: 24px;
+                    height: 24px;
+                    padding: 3px;
+                    background-clip: content-box;
+                    border: 2px solid $black;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+
+    .form-suite-field {
+        width: 38%;
+        float: left;
+        margin-right: 4%;
+
+        @media (max-width: $tablet) {
+            width: 100%;
+            margin-right: 0;
+        }
+    }
+
+    .form-referrer-field {
+        width: 58%;
+        float: left;
+        clear: none;
+
+        @media (max-width: $tablet) {
+            width: 100%;
+            margin-right: 0;
+        }
+    }
+
+    // dropdowns
+    .custom-dropdown {
+        text-align: center;
+        position: relative;
+
+        @media (max-width: $small-desktop) {
+            display: none;
+        }
+
+        // label container
+        .selected-option {
+            background: $grey;
+            padding: 6px;
+            position: relative;
+            border: 4px solid $grey;
+
+            .text {
+                display: block;
+                font-size: 15px;
+                font-weight: bold;
+                letter-spacing: 3px;
+                text-transform: uppercase;         
+                cursor: pointer;
+                margin-left: -26px;
+            }
+
+            .arrow {
+                width: 26px;
+                height: 100%;
+                position: absolute;
+                right: 0;
+                top: 0;
+                background: $green;
+                display: inline-block;
+                cursor: pointer;
+
+                &:after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    width: 60%;
+                    height: 60%;
+                    margin: auto;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    background: url(../images/dropdown-arrow.svg) center center no-repeat;
+                }
+            }
+        }
+
+        // open and closing
+        .dd-container {
+            display:none;
+            margin-top: 1px !important;
+
+            &.dd-closed {
+                display: none;
+            }
+
+            &.dd-open {
+                display: block;
+                position: absolute;
+                width: 100%;
+                z-index: 100;
+                box-shadow: 0px 5px 8px 0px rgba($black, 0.1);
+            }
+        }
+
+        // dropdown inner list styling
+        .dropdown-item {
+            margin-bottom: 0 !important;
+            border-bottom: 1px solid white !important;
+
+            &:last-of-type {
+                border-bottom: none !important;
+            }
+            
+            a {
+                color: $black;
+                padding: 8px;
+                display: block;
+                font-size: 15px;
+                font-weight: 600;
+                letter-spacing: 3px;
+                text-transform: uppercase;
+                background: $grey;
+                transition: all 0.15s ease-in-out;
+        
+                &:hover {
+                    background: $green;
+                }
+            }
+        }
+    }
+
+    @media (max-width: $tablet) {
+        label, p, span, input, .wpforms-error {
+            font-size: 13px;
+        }
+    }
+}

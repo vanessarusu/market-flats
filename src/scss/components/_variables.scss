@@ -1,0 +1,22 @@
+:root {
+    --green: #a0ab4d;
+    --dark-green: #7b7c3a;
+    --black: #101820;
+    --grey: #e1e2e3;
+
+    --sans-serif: myriad-pro, sans-serif;
+}
+
+$green: #a0ab4d;
+$dark-green: #7b7c3a;
+$black: #101820;
+$grey: #e1e2e3;
+$sans-serif: myriad-pro, sans-serif;
+
+$small-desktop: 1200px;
+$tablet: 768px;
+$mobile: 768px;
+
+* {
+    font-family: myriad-pro, sans-serif;
+}

@@ -1,0 +1,58 @@
+body:not(.logged-in) #splashPage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: block;
+}
+
+body.logged-in {
+    #splashPage svg {
+        opacity: 1;
+    }
+}
+#splashPage {
+    a {
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    
+    .fl-row-content-wrap {
+        background-size: 90%;
+        background-position: 0% 50%;
+    }
+}
+
+#dismissSplash img {
+    cursor: pointer;
+    max-width: 34px;
+}
+
+.fl-builder-content-primary > div.fl-row:not(#splashPage) {
+    transition: 1s -webkit-filter linear;
+    transition-delay: 3s;
+}
+
+body:not(.fl-builder-edit) .scroll-animation {
+    animation: bounce 1.8s infinite;
+    animation-timing-function: ease-in-out;
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(-15px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-15px);
+    }
+}

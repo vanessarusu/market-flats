@@ -1,0 +1,44 @@
+@import './components/variables';
+@import './components/typography';
+@import './components/utils';
+@import './components/splash-page';
+@import './components/header';
+@import './components/lightbox';
+@import './components/form';
+
+footer {
+    a {
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+
+            @media (min-width: $tablet) {
+                color: $green !important;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+body {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    // background: $green;
+}
+
+body:not(.fl-builder-edit) .line-drawing-container {
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 14vh;
+}
+
+svg#lineDrawing {
+    max-width: 1000px;
+    width: 65vw;
+    height: 60vh;
+    opacity: 0;
+}
