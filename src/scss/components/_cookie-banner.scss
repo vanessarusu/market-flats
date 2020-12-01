@@ -1,4 +1,4 @@
-#cookie-notice {
+#cookie-notice:not(.cookie-notice-hidden) {
     padding: 4rem 0;
     .cookie-notice-container {
         display: flex;
