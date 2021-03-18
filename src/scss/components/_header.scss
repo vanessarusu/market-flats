@@ -63,6 +63,7 @@ nav.top-bar-nav {
                 float: left;
 
                 &:before {
+                    pointer-events: none;
                     font-size: 26px;
                     position: absolute;
                     z-index: 10;
