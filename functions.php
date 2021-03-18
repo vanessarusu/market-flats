@@ -34,11 +34,34 @@ function load_custom_templates() {
             'p'         => 139
         ) );
     }  
-    
 }
 
+function my_global_builder_posts( $post_ids ) {
+    $post_ids[] = '360';
+    $post_ids[] = '417';
+    $post_ids[] = '439';
+    $post_ids[] = '441';
+    $post_ids[] = '443';
+    $post_ids[] = '445';
+    $post_ids[] = '447';
+    $post_ids[] = '449';
+    $post_ids[] = '451';
+    $post_ids[] = '453';
+    $post_ids[] = '455';
+    $post_ids[] = '457';
+    $post_ids[] = '459';
+    return $post_ids;
+  }
+
+add_filter( 'fl_builder_global_posts', 'my_global_builder_posts' );
 
 add_action( 'customize_register', 'vive_market_customize_register' );
 
 add_action( 'fl_before_header', 'load_custom_templates' );
 add_action('wp_enqueue_scripts', '_vive_market_flats_assets', 1000 );
+
+
+
+add_action( 'wp_enqueue_scripts', function(){
+    wp_enqueue_script( 'wp-api' );
+} );

@@ -73,3 +73,64 @@ body:not(.fl-builder-edit) #lightboxForm {
         overflow: hidden;
     }
 }
+
+
+.essential-grid-custom-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba($black, 0.8);
+    z-index: 1000;
+    overflow-y: scroll;
+    animation: fadeIn 0.2s infinite;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+
+    button {
+        width: 28px;
+        height: 28px;
+        position: fixed;
+        right: 2rem;
+        top: 2rem;
+        z-index: 1000;
+        padding: 0;
+        background: transparent;
+        border: none;
+
+        span {
+            height: 2px;
+            display: block;
+            width: 100%;
+            background: white;
+            pointer-events: none;
+            position: absolute;
+            top: 50%;
+
+            &:first-of-type {
+                transform: rotate(45deg);
+            }
+            &:last-of-type {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+    .fl-builder-content {
+        margin-top: 10vh;
+        a {
+            border: none;
+        }
+    }
+
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

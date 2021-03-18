@@ -1,0 +1,13 @@
+footer {
+    a {
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+
+            @media (min-width: $tablet) {
+                color: $green !important;
+                text-decoration: none;
+            }
+        }
+    }
+}

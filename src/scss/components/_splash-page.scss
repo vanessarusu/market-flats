@@ -56,3 +56,20 @@ body:not(.fl-builder-edit) .scroll-animation {
         transform: translateY(-15px);
     }
 }
+
+body:not(.fl-builder-edit) .line-drawing-container {
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 14vh;
+}
+
+svg#lineDrawing {
+    max-width: 1000px;
+    width: 65vw;
+    height: 60vh;
+    opacity: 0;
+}

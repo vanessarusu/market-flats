@@ -1,0 +1,45 @@
+.esg-bc.eec {
+    @media (max-width: 800px) {
+        position: relative;
+        top: 0;
+        left: 0;
+
+        .esg-bottom {
+            position: absolute;
+            top: 3rem;
+            left: 0;
+            padding: 1.6rem;
+        }
+    }
+}
+
+body:not(.fl-builder-edit) {
+    .position-relative {
+        position: relative;
+    }
+
+    .photo-label {
+        position: absolute;
+        bottom: 4rem;
+        display: inline;
+        width: auto !important;
+        padding: 0.4rem 2rem;
+        
+        @media (max-width: 800px) {
+            .fl-module-content {
+                margin: 0.6rem;
+            }
+        }
+        background: rgba(white, 0.8);
+
+        &.right {
+            right: 0;
+        }
+
+        &.left {
+            left: 0;
+        }
+
+        
+    }
+}

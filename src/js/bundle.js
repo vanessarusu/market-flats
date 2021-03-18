@@ -1,7 +1,18 @@
 import splashPage from './splash-page';
 import formStyling from './form-styling';
+import suitesGridLightbox from './suites-grid-lightbox';
 
 (function() {
+
+    var pageIds = {
+        suites: "342",
+    }
+
+    if(document.querySelector(`body.page-id-${pageIds.suites}`)) {
+        const sgl = suitesGridLightbox();
+        sgl.init();
+    }
+
     const sp = splashPage(); 
     const fs = formStyling();
 
@@ -48,5 +59,5 @@ import formStyling from './form-styling';
         document.querySelector('#lightboxForm').classList.remove('lightbox-open');
     }
 }
-    
+
 ());

@@ -1,0 +1,119 @@
+#esg-grid-3-1 {
+
+    // format grid item copy spacing
+    &.esg-grid li {
+        cursor: pointer;
+
+        .esg-center {
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    // format + icon
+    .eg-icon-plus:before {
+        content: '+';
+    }
+
+    // filters
+    .esg-filters {
+        .esg-filter-wrapper {
+            margin-bottom: 8rem; 
+
+            @media(max-width: 700px) {
+                width: 100%;
+            }
+        }
+
+        .esg-filterbutton {
+            background: $black;
+            border: none;
+            border-radius: 0;
+            overflow: visible;
+            position: relative;
+            margin: 0;
+            transition: all 0.2s ease-in-out;
+
+            
+
+            &:nth-child(2) {
+                padding-left: 1rem;
+                &:before {
+                    display: none;
+                }
+            }
+
+            &:nth-last-child(2) {
+                &:after {
+                    display: none;
+                }
+            }
+
+            &.selected {
+                background: $green;
+                box-shadow: none;
+                span {
+                    color: $black;
+                }
+            }
+            
+            span {
+                font-weight: bold;
+                color: #fff;
+                text-transform: uppercase;
+                font-family: $sans-serif;
+                font-size: 2rem;
+                padding: 1rem 3rem;
+                transition: all 0.15s ease-in-out;
+
+                @media(max-width: 900px) {
+                    font-size: 1.3rem;
+                    padding: 0 2rem;
+                }
+            }
+
+            &:after {
+                content: '';
+                width: 0;
+                right: -1px;
+                top: -10px;
+                position: absolute;
+                display: block;
+                bottom: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 0 54px 20px;
+                border-color: transparent transparent #fff transparent;
+            }
+
+            &:before {
+                content: '';
+                width: 0;
+                left: -1px;
+                top: -10px;
+                position: absolute;
+                display: block;
+                bottom: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 54px 20px 0 0;
+                border-color: white transparent transparent transparent;
+            }
+
+            @media(max-width: 700px) {
+                display: block;
+                width: 100%;
+                margin: 0.5rem 0;
+
+                span {
+                    font-size: 1.4rem;
+                }
+
+                &:before, &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+}
