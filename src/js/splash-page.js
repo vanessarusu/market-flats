@@ -99,7 +99,10 @@ const splashPage = (function () {
                     body.style.opacity = 1;
         
                     // if not logged in and/or  editing
-                    if(!(body.classList.contains('logged-in') || body.classList.contains('fl-builder-edit'))) {
+                    if(!(body.classList.contains('logged-in') 
+                    || body.classList.contains('fl-builder-edit')
+                    || body.classList.contains('page-id-229')
+                    || body.classList.contains('page-id-3'))) {
                         addListeners();
                         animationConfig();
                         playSplashPage();
