@@ -90,7 +90,9 @@ const splashPage = (function () {
 
     function init() {
         // force scroll to top, then load splash page
-        if(shouldPlay && window.innerWidth >= 768) {
+        if(shouldPlay && window.innerWidth >= 768 
+            && !(body.classList.contains('page-id-229')
+            || body.classList.contains('page-id-3'))) {
             window.addEventListener('load', (event) => {
                 window.scrollTo(0,0);
     
@@ -101,8 +103,7 @@ const splashPage = (function () {
                     // if not logged in and/or  editing
                     if(!(body.classList.contains('logged-in') 
                     || body.classList.contains('fl-builder-edit')
-                    || body.classList.contains('page-id-229')
-                    || body.classList.contains('page-id-3'))) {
+                    )) {
                         addListeners();
                         animationConfig();
                         playSplashPage();
