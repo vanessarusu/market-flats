@@ -54,7 +54,10 @@ const suitesGridLightbox = (function () {
     }
 
     function init() {
-        gridItems.forEach(configureClickEvent);
+        wp.api.loadPromise.done( function(data) {
+            gridItems.forEach(configureClickEvent);
+    
+        } );
     }
 
     return {
